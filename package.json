@@ -1,15 +1,16 @@
 {
-  "name": "my-app",
-  "productName": "my-app",
+  "name": "terminal",
+  "productName": "terminal",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Terminal de Consulta",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts,.tsx ."
+    "lint": "eslint --ext .ts,.tsx .",
+    "make-raspberry": "electron-forge make --arch=arm64 --targets=deb --platform=linux"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",
