@@ -1,8 +1,9 @@
 {
   "name": "terminal",
-  "productName": "terminal",
+  "productName": "TerminaldeConsulta",
+  "private": true,
   "version": "1.0.0",
-  "description": "Terminal de Consulta",
+  "description": "terminal-de-consulta",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
