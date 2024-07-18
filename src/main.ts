@@ -9,13 +9,14 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
     frame: false,
+    fullscreen: true,
+    kiosk: true,
     webPreferences: {
+      allowRunningInsecureContent: true,
       preload: path.join(__dirname, 'preload.js'),
     },
-    icon: 'assets/images/icon.png',
+    icon: '../assets/images/icon.png',
   });
 
   // and load the index.html of the app.

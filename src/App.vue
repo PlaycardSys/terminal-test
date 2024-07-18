@@ -1,8 +1,16 @@
+<script lang="ts" setup>
+import SnackBar from './components/SnackBar.vue';
+</script>
+
 <template>
-  <h1>PlaycardSys</h1>
-  <p>Terminal de Consulta</p>
+  <v-app>
+    <SnackBar />
+    <router-view />
+  </v-app>
 </template>
 
-<script setup>
-console.log('👋 Terminal de Consulta - PlaycardSys');
-</script>
+<style>
+html {
+  overflow: hidden;
+}
+</style>
