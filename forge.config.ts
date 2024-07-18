@@ -9,8 +9,8 @@ import { FuseV1Options, FuseVersion } from '@electron/fuses';
 
 const config: ForgeConfig = {
   packagerConfig: {
-    executableName: "terminal-consulta",
-    name: 'Terminal de Consulta',
+    executableName: "terminal-de-consulta",
+    name: 'terminal-de-consulta',
     asar: true,
   },
   rebuildConfig: {},
