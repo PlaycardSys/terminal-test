@@ -12,7 +12,7 @@ function checkAndRedirect() {
     router.push({
       name: 'historical',
       params: {
-        cardId: formatCardNumber(cardNumber.value),
+        cardId: `>${formatCardNumber(cardNumber.value)}`,
       },
     });
   }

@@ -149,6 +149,16 @@ onMounted(async () => {
     </v-row>
 
     <!-- Row Table -->
+    <v-row v-if="dataSetLoading">
+      <v-col>
+        <v-skeleton-loader
+          class="mx-auto"
+          type="table"
+          height="83vh"
+        />
+      </v-col>
+    </v-row>
+
     <v-row v-if="dataSet.length > 0">
       <v-col>
         <v-card>

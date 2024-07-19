@@ -11,9 +11,6 @@ const HistoricalRoutes = [
           import(
             /* webpackChunkName: "historicalHomeView" */ '../views/HomeView.vue'
           ),
-        meta: {
-          transition: 'fade',
-        },
       },
       {
         path: ':cardId',
@@ -22,9 +19,6 @@ const HistoricalRoutes = [
           import(
             /* webpackChunkName: "historicalTableView" */ '../views/TableView.vue'
           ),
-        meta: {
-          transition: 'fade',
-        },
       },
     ],
   },

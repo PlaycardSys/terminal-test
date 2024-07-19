@@ -9,9 +9,9 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    frame: false,
-    fullscreen: true,
-    kiosk: true,
+    frame: true,
+    //fullscreen: true,
+    //kiosk: true,
     webPreferences: {
       allowRunningInsecureContent: true,
       preload: path.join(__dirname, 'preload.js'),
