@@ -2,7 +2,7 @@
   "name": "terminal-de-consulta",
   "productName": "TerminaldeConsulta",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "terminal-de-consulta",
   "main": ".vite/build/main.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
-    "make-raspberry": "electron-forge make --arch=arm64 --targets=deb --platform=linux"
+    "make-raspberry": "electron-forge make --arch=arm64 --targets=deb --platform=linux",
+    "make-windows": "electron-forge make --arch=x64 --targets=@electron-forge/maker-squirrel --platform=darwin"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",

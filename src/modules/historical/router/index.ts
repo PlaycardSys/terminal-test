@@ -1,24 +1,22 @@
+import HistoricalModule from '../HistoricalModule.vue';
+import HomeView from '../views/HomeView.vue';
+import TableView from '../views/TableView.vue';
+
 const HistoricalRoutes = [
   {
     path: '/historical',
     name: 'historicalModule',
-    component: () => import('../HistoricalModule.vue'),
+    component: HistoricalModule,
     children: [
       {
         path: 'home',
         name: 'historicalHomeView',
-        component: () =>
-          import(
-            /* webpackChunkName: "historicalHomeView" */ '../views/HomeView.vue'
-          ),
+        component: HomeView,
       },
       {
         path: ':cardId',
         name: 'historical',
-        component: () =>
-          import(
-            /* webpackChunkName: "historicalTableView" */ '../views/TableView.vue'
-          ),
+        component: TableView,
       },
     ],
   },

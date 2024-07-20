@@ -12,10 +12,6 @@ const config: ForgeConfig = {
     executableName: "terminal-de-consulta",
     name: 'terminal-de-consulta',
     asar: true,
-    icon: './assets/images/icon',
-    extraResource: [
-      './assets',
-    ],
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({

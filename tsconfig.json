@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
     "module": "commonjs",
     "allowJs": true,
     "skipLibCheck": true,
@@ -11,5 +11,5 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true
-  },
+  }
 }
