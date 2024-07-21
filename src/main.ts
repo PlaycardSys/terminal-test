@@ -12,8 +12,10 @@ const createWindow = () => {
     width: 800,
     height: 600,
     frame: true,
+    icon: path.join(process.resourcesPath, 'public/icons/256x256.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
     },
   });
 
@@ -25,7 +27,9 @@ const createWindow = () => {
   }
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+    mainWindow.webContents.openDevTools();
+  }
 };
 
 // This method will be called when Electron has finished

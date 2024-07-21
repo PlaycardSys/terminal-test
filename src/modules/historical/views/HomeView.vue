@@ -6,6 +6,7 @@ import {formatCardNumber} from '../../../helpers/formatter';
 const cardNumber = ref(null);
 const dataCardFormInput = ref(null);
 const router = useRouter();
+const videoSrc = ref('');
 
 function checkAndRedirect() {
   if (cardNumber.value.trim() !== '') {
@@ -18,6 +19,7 @@ function checkAndRedirect() {
   }
 }
 onMounted(() => {
+  videoSrc.value = window.electron.getVideoSrc('videos/video-terminal.mp4');
   dataCardFormInput.value.focus();
 });
 </script>
@@ -38,7 +40,7 @@ onMounted(() => {
           aria-labelledby="VideoPlayer"
         >
           <source 
-            src="../../../../assets/videos/video-terminal.mp4" 
+            :src="videoSrc"
             type="video/mp4"
           >
         </video>

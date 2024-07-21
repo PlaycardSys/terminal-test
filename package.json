@@ -1,8 +1,8 @@
 {
   "name": "terminal-de-consulta",
-  "productName": "TerminaldeConsulta",
+  "productName": "Terminal de Consulta",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "terminal-de-consulta",
   "main": ".vite/build/main.js",
   "scripts": {
