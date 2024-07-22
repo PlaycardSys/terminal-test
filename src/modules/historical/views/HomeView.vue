@@ -31,7 +31,7 @@ onMounted(() => {
     fluid
   >
     <v-row no-gutters>
-      <v-col>
+      <v-col class="d-flex justify-center">
         <video 
           no-controls 
           autoplay 

@@ -11,7 +11,8 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    frame: true,
+    fullscreen: (process.env.NODE_ENV) ? false : true,
+    frame: (process.env.NODE_ENV) ? true : false,
     icon: path.join(process.resourcesPath, 'public/icons/256x256.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -26,7 +27,7 @@ const createWindow = () => {
   }
 
   // Open the DevTools.
-  if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
+  if (process.env.NODE_ENV) {
     mainWindow.webContents.openDevTools();
   }
 };
