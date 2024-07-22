@@ -19,7 +19,9 @@ function checkAndRedirect() {
   }
 }
 onMounted(() => {
-  videoSrc.value = window.electron.getVideoSrc('videos/video-terminal.mp4');
+  const isDev = process.env.NODE_ENV === 'development';
+
+  videoSrc.value = isDev ? '/videos/video-terminal.mp4' : `../../../../videos/video-terminal.mp4`;
   dataCardFormInput.value.focus();
 });
 </script>

@@ -15,7 +15,6 @@ const createWindow = () => {
     icon: path.join(process.resourcesPath, 'public/icons/256x256.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true,
     },
   });
 

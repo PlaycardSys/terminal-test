@@ -12,7 +12,7 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
     "make-raspberry": "electron-forge make --arch=arm64 --targets=deb --platform=linux",
-    "make-windows": "electron-forge make --arch=x64 --targets=@electron-forge/maker-squirrel --platform=darwin"
+    "make-windows": "electron-forge make --arch=x64 --targets=@electron-forge/maker-squirrel --platform=win32"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",

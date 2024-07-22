@@ -11,19 +11,23 @@ const config: ForgeConfig = {
   packagerConfig: {
     executableName: "terminal-de-consulta",
     name: 'terminal-de-consulta',
-    asar: true,
-    icon: "./public/icons/256x256",
+    asar: {
+      unpack: '**/videos/**',
+    },
+    icon: "./public/icons/icon",
     extraResource: [
       './public/videos',
       './public/icons'
     ]
   },
   rebuildConfig: {},
-  makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({
+  makers: [new MakerSquirrel({
+    setupIcon: './public/icons/icon.ico',
+  }), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({
     options: {
       name: 'terminal-de-consulta',
       productName: 'Terminal De Consulta',
-      icon: './public/icons/256x256.png',
+      icon: './public/icons/icon.png',
     }
   })],
   plugins: [
